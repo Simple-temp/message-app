@@ -1,0 +1,19 @@
+.msg-box{
+    width:200px;
+}
+.msg-box.own{
+    text-align: right;
+    margin-left: auto;
+    display: block;
+}
+.msg-box.their{
+    text-align: left;
+    margin-right: auto;
+}
+.me{
+    background-color: rgb(0, 63, 199);
+    color:#fff;
+}
+.friend{
+    background-color: rgb(218, 218, 218);
+}
