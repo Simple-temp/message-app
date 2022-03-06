@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getFirestore, collection, query, where, onSnapshot, addDoc, Timestamp, orderBy } from "firebase/firestore"
+import { getFirestore, collection, query, where, onSnapshot, addDoc, Timestamp, orderBy, setDoc, doc, getDoc, updateDoc } from "firebase/firestore"
 import { getAuth } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import firebaseConfig from '../Register/firebaseConfig';
@@ -8,6 +8,7 @@ import Users from '../Users/Users';
 import MessageForm from '../MessageForm/MessageForm';
 import "./Home.css"
 import Message from '../Message/Message';
+import { async } from '@firebase/util';
 
 
 initializeApp(firebaseConfig)
@@ -39,7 +40,7 @@ const Home = () => {
     }, [])
     console.log(users)
 
-    const selectedUser = (user) => {
+    const selectedUser = async (user) => {
         setChat(user)
         console.log(user)
         const user2 = user.uid
@@ -53,6 +54,12 @@ const Home = () => {
             })
             setMessages(msgs)
         })   
+
+        const docSnap = await getDoc(doc(db,"lastMsg",id))
+        if( docSnap.data()?.form !== user1)
+        {
+            await updateDoc(doc(db, "lastMsg", id), {unRead : false})
+        }
     }
     console.log(messages)
 
@@ -78,7 +85,18 @@ const Home = () => {
             createdAt: Timestamp.fromDate(new Date()),
             media : url || ""
         })
+
+        await setDoc(doc(db,"lastMsg", id),{
+            text,
+            form: user1,
+            to: user2,
+            createdAt: Timestamp.fromDate(new Date()),
+            media : url || "",
+            unRead : true 
+        })
+
         setText("")
+        setImg("")
     }
 
     return (
@@ -87,7 +105,7 @@ const Home = () => {
                 <div className="row">
                     <div className="col-lg-4">
                         {
-                            users.map(user => <Users key={user.uid} user={user} selectedUser={selectedUser}></Users>)
+                            users.map(user => <Users key={user.uid} user={user} selectedUser={selectedUser} user1={user1} chat={chat}></Users>)
                         }
                     </div>
                     <div className="col-lg-8">

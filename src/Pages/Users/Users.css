@@ -26,3 +26,16 @@
 .left-side{
     border-right:1px solid #000;
 }
+.slected-user{
+    background-color: rgb(233, 233, 233);
+}
+.truncate{
+    font-size:14px;
+    white-space: nowrap;
+    width:90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.truncate strong{
+    margin-right:10px;
+}
