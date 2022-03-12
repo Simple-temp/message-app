@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import Moment from 'react-moment';
-import "./Message.css"
 
 const Message = ({ msg, user1 }) => {
 

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import picture from "../../img/about.jpg"
-import "./Profile.css"
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getStorage, ref, getDownloadURL, uploadBytes, deleteObject } from "firebase/storage";

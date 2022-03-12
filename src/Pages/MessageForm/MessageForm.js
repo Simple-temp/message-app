@@ -1,5 +1,4 @@
 import React from 'react';
-import "./MessageForm.css"
 
 const MessageForm = ({ handleSubmit, text, setText, setImg }) => {
     return (

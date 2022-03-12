@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { onSnapshot, doc } from 'firebase/firestore';
 import picture from "../../img/about.jpg"
-import "./Users.css"
 import firebaseConfig from '../Register/firebaseConfig';
 import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';

@@ -1,0 +1,135 @@
+/*=========================================================================== users ================================ */
+.avatar{
+    width:62px;
+    height:62px;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+}
+.user-status{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+    margin-right:20px
+}
+.online{
+    background:green;
+}
+.offline{
+    background:red;
+}
+.left-side{
+    border-right:1px solid #000;
+}
+.slected-user{
+    background-color: rgb(233, 233, 233);
+}
+.truncate{
+    font-size:14px;
+    white-space: nowrap;
+    width:90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.truncate strong{
+    margin-right:10px;
+}
+
+/* =========================================================================profile=========================== */
+
+.img-box img {
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+}
+.info-box p {
+    border-bottom:1px solid #000;
+    padding-bottom:12px;
+}
+.img-box{
+    position:relative;
+    margin-right:20px;
+}
+.overlay{
+    height:100%;
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+.overlay i {
+    font-size:25px;
+    cursor: pointer;
+}
+.img-box:hover .overlay{
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+.overlay input {
+    display:none;
+}
+
+/*==============================================================================messageform ==============================*/
+
+.upload{
+    font-size:20px;
+}
+
+/*==============================================================================messageform ==============================*/
+
+.msg-box{
+    width:200px;
+}
+.msg-box.own{
+    text-align: right;
+    margin-left: auto;
+    display: block;
+}
+.msg-box.their{
+    text-align: left;
+    margin-right: auto;
+}
+.me{
+    background-color: rgb(0, 63, 199);
+    color:#fff;
+}
+.friend{
+    background-color: rgb(218, 218, 218);
+}
+
+/*==============================================================================home ==============================*/
+
+.messages-box{
+    height:85vh;
+}
+.messages{
+    background-color: rgb(231, 231, 231);
+    height:500px;
+    overflow: auto;
+}

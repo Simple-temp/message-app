@@ -6,7 +6,6 @@ import firebaseConfig from '../Register/firebaseConfig';
 import { getStorage, ref, getDownloadURL, uploadBytes } from "firebase/storage";
 import Users from '../Users/Users';
 import MessageForm from '../MessageForm/MessageForm';
-import "./Home.css"
 import Message from '../Message/Message';
 import { async } from '@firebase/util';
 

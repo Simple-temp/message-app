@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ContextApi from "./Pages/ContextApi/ContextApi";
 import Home from "./Pages/Home/Home";
