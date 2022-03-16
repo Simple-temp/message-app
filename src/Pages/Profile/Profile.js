@@ -70,7 +70,7 @@ const Profile = () => {
         user ? <section>
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6">
+                    <div className="col-lg-5 mx-auto">
                         <div className="profile d-flex mt-5">
                             <div className="img-box">
                                 <img src={user.avatar || picture} alt="avatar" />

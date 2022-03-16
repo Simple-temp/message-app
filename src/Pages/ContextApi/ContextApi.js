@@ -3,6 +3,7 @@ import { createContext, useState, useEffect } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { initializeApp } from "firebase/app";
 import firebaseConfig from '../Register/firebaseConfig';
+import loadings from "../../img/loading.gif"
 
 
 initializeApp(firebaseConfig)
@@ -23,7 +24,9 @@ const ContextApi = ({children}) => {
         })
     },[])
     if(loading){
-        return "Loading"
+        return <div className='spinner'>
+            <img src={loadings} alt="" className='loading-img' />
+        </div>
     }
 
     return (

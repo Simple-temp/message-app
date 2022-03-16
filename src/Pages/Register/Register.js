@@ -118,9 +118,9 @@ const Register = () => {
 
     return (
         <section>
-            <div className="container">
-                <h3>Create an account</h3>
-                <div className="col-lg-8">
+            <div className="container register">
+                <h3 className='text-center my-4'>Create an account</h3>
+                <div className="col-lg-6 mx-auto mt-5">
                     <form action="" onSubmit={handleSubmit}>
                         <div class="mb-3">
                             <input name="name" value={name} onChange={handoleChange} type="text" class="form-control" placeholder='Name' />

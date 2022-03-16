@@ -1,3 +1,9 @@
+.spinner{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 /*=========================================================================== users ================================ */
 .avatar{
     width:62px;
@@ -40,7 +46,27 @@
 .truncate strong{
     margin-right:10px;
 }
-
+.userinfo-sms{
+    padding-left:20px;
+}
+.left-side{
+    padding:9px 9px;
+    margin-top:6px;
+}
+.left-side h5 {
+    text-transform: capitalize;
+}
+.unread{
+    background-color: rgb(0, 0, 0);
+    padding:3px 14px;
+    font-weight:bold;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    color:#fff;
+}
 /* =========================================================================profile=========================== */
 
 .img-box img {
@@ -94,7 +120,10 @@
 .overlay input {
     display:none;
 }
-
+.profile{
+    border:1px solid rgb(10, 116, 255);
+    padding:20px;  
+}
 /*==============================================================================messageform ==============================*/
 
 .upload{
@@ -132,4 +161,24 @@
     background-color: rgb(231, 231, 231);
     height:500px;
     overflow: auto;
+}
+/*==============================================================================login ==============================*/
+.login,.register{
+    border:1px solid rgb(10, 116, 255);
+    height:500px;
+    margin-top:50px;
+}
+@media (max-width:768px) {
+    .userinfo-sms{
+        display:none;
+    }
+    .avatar{
+        width:48px;
+        height:48px
+    }
+}
+@media (max-width:369px) {
+    .user-status{
+        display:none;
+    }
 }

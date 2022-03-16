@@ -62,9 +62,9 @@ const Login = () => {
 
     return (
         <section>
-            <div className="container">
-                <h3>Login</h3>
-                <div className="col-lg-8">
+            <div className="container login">
+                <h3 className='text-center my-4'>Login</h3>
+                <div className="col-lg-6 mx-auto mt-5">
                     <form action="" onSubmit={handleSubmit}>
                         <div class="mb-3">
                             <input name="email" value={email} onChange={handoleChange} type="email" class="form-control" placeholder='Email' />

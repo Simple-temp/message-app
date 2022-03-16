@@ -7,7 +7,6 @@ import { getStorage, ref, getDownloadURL, uploadBytes } from "firebase/storage";
 import Users from '../Users/Users';
 import MessageForm from '../MessageForm/MessageForm';
 import Message from '../Message/Message';
-import { async } from '@firebase/util';
 
 
 initializeApp(firebaseConfig)
@@ -100,14 +99,14 @@ const Home = () => {
 
     return (
         <section>
-            <div className="container">
+            <div className="container mt-3">
                 <div className="row">
-                    <div className="col-lg-4">
+                    <div className="col-lg-4 col-md-4 col-4">
                         {
                             users.map(user => <Users key={user.uid} user={user} selectedUser={selectedUser} user1={user1} chat={chat}></Users>)
                         }
                     </div>
-                    <div className="col-lg-8">
+                    <div className="col-lg-8 col-md-8 col-8">
                         <div className="messages-box">
                             {
                                 chat ?

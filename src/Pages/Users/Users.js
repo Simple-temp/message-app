@@ -26,22 +26,24 @@ const Users = ({ user1, user, selectedUser, chat }) => {
         <div className={`left-side d-flex justify-content-between ${chat.name === user.name && "slected-user"}`} onClick={() => selectedUser(user)}>
             <div className="user-details d-flex">
                 <img src={user.avatar || picture} alt="avatar" className='avatar' />
-                <h4>{user.name}</h4>
-                {
-                    data?.form !== user1 && data?.unRead && (
-                        <small className='unread'>New</small>
-                    )
-                }
+                <div className="userinfo-sms">
+                    <h5>{user.name}</h5>
+                    {
+                        data?.form !== user1 && data?.unRead && (
+                            <small className='unread'>New</small>
+                        )
+                    }
+                    {
+                        data && (
+                            <p className='truncate'>
+                                <strong>{data.form === user1 ? "You : " : null}</strong>
+                                {data.text}
+                            </p>
+                        )
+                    }
+                </div>
             </div>
             <div className={`user-status ${user.isOnline ? "online" : "offline"}`}></div>
-            {
-                data && (
-                    <p className='truncate'>
-                        <strong>{data.form === user1 ? "You : " : null}</strong>
-                        {data.text}
-                    </p>
-                )
-            }
         </div>
     );
 };
