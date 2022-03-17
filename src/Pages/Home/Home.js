@@ -101,12 +101,12 @@ const Home = () => {
         <section>
             <div className="container mt-3">
                 <div className="row">
-                    <div className="col-lg-4 col-md-4 col-4">
+                    <div className="col-lg-4 col-md-4 col-3">
                         {
                             users.map(user => <Users key={user.uid} user={user} selectedUser={selectedUser} user1={user1} chat={chat}></Users>)
                         }
                     </div>
-                    <div className="col-lg-8 col-md-8 col-8">
+                    <div className="col-lg-8 col-md-8 col-9">
                         <div className="messages-box">
                             {
                                 chat ?
@@ -128,7 +128,7 @@ const Home = () => {
                                         />
                                     </>
                                     : <div>
-                                        <h3 className='empty-message'>Start new conversation</h3>
+                                        <h3 className='empty-message'>Select a user and start chat</h3>
                                     </div>
                             }
                         </div>

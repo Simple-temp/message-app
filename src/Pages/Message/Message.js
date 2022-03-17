@@ -12,14 +12,14 @@ const Message = ({ msg, user1 }) => {
     return (
         <div className={`msg-box ${msg.form === user1 ? "own" : "their"}`}>
 
-            {msg.media ? <img src={msg.media} alt={msg.text} style={{ width: "200px", height: "auto" }} /> : null}
+            {msg.media ? <img src={msg.media} alt={msg.text} style={{ width: "200px", height: "auto" }} className="text-img" /> : null}
 
             <div className='sms-text'>
-                <p className={`${msg.form === user1 ? "me" : "friend"}`}>{msg.text}</p>
+                <p className={`${msg.form === user1 ? "me" : "friend"}`}>{ !msg.text ? "" : msg.text }</p>
             </div>
 
             <small>
-                <Moment fromNow>{msg.createdAt.toDate()}</Moment>
+                <Moment fromNow className='moment'>{msg.createdAt.toDate()}</Moment>
             </small>
 
         </div>
